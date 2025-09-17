@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Structure</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2575fc;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #6a11cb;
+            margin: 20px 0 10px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .code-container {
+            background: #f8f9fa;
+            border-left: 4px solid #2575fc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+            overflow-x: auto;
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            color: #e83e8c;
+        }
+        
+        .highlight {
+            background: #fff4cc;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .validator-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Basic HTML Structure</h1>
+            <p>A simple, valid HTML5 document that passes W3C validation</p>
+        </header>
+        
+        <main>
+            <h2>HTML5 Document Structure</h2>
+            <p>Every valid HTML5 document should include the following basic elements:</p>
+            
+            <div class="code-container">
+                <code>
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html lang="en"&gt;<br>
+                    &lt;head&gt;<br>
+                    &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                    &nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                    &nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+                    &lt;/head&gt;<br>
+                    &lt;body&gt;<br>
+                    &nbsp;&nbsp;&lt;!-- Content goes here --&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </code>
+            </div>
+            
+            <h2>Key Elements Explained</h2>
+            
+            <p><span class="highlight">&lt;!DOCTYPE html&gt;</span> - Declares that this is an HTML5 document.</p>
+            
+            <p><span class="highlight">&lt;html lang="en"&gt;</span> - The root element of the HTML page with language specification.</p>
+            
+            <p><span class="highlight">&lt;head&gt;</span> - Contains meta information about the document.</p>
+            
+            <p><span class="highlight">&lt;meta charset="UTF-8"&gt;</span> - Defines the character encoding for the document.</p>
+            
+            <p><span class="highlight">&lt;meta name="viewport"&gt;</span> - Ensures proper rendering and touch zooming on mobile devices.</p>
+            
+            <p><span class="highlight">&lt;title&gt;</span> - Specifies a title for the document (shown in browser tab).</p>
+            
+            <p><span class="highlight">&lt;body&gt;</span> - Contains the visible content of the document.</p>
+            
+            <div class="validator-info">
+                <h2>W3C Validator</h2>
+                <p>This HTML document is valid and will pass the W3C validation without errors.</p>
+                <p>To validate your own HTML, visit the <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a>.</p>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>Basic HTML Structure - Valid HTML5 Example</p>
+    </footer>
+</body>
+</html>
