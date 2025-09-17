@@ -338,3 +338,191 @@
     </div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Tweet Checker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1da1f2, #0e71c8);
+            color: #14171a;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #1da1f2;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #0e71c8;
+            margin: 20px 0 10px;
+            text-align: left;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+        
+        .code-container {
+            background: #f5f8fa;
+            border-left: 4px solid #1da1f2;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+            overflow-x: auto;
+            text-align: left;
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            color: #e83e8c;
+        }
+        
+        .result {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .tweet-example {
+            background: #f5f8fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .instructions {
+            background: #fff4e6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 4px solid #ff922b;
+        }
+        
+        .twitter-blue {
+            color: #1da1f2;
+        }
+        
+        footer {
+            margin-top: 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Twitter Tweet Checker</h1>
+        <p>This page helps you verify if your tweets.html file contains an embedded Tweet with the class "twitter-tweet".</p>
+        
+        <div class="instructions">
+            <h2>📋 Instructions</h2>
+            <p>To complete the assignment, your tweets.html file must contain at least one embedded Tweet with the class <code>twitter-tweet</code>.</p>
+        </div>
+        
+        <h2>Expected Structure</h2>
+        <p>Your tweets.html should contain code similar to this:</p>
+        
+        <div class="code-container">
+            <code>
+                &lt;blockquote class="twitter-tweet"&gt;<br>
+                &nbsp;&nbsp;&lt;p lang="en" dir="ltr"&gt;Example tweet content goes here...&lt;/p&gt;<br>
+                &nbsp;&nbsp;&amp;mdash; Twitter User (@username) <br>
+                &nbsp;&nbsp;&lt;a href="https://twitter.com/username/status/1234567890"&gt;January 1, 2023&lt;/a&gt;<br>
+                &lt;/blockquote&gt;
+            </code>
+        </div>
+        
+        <h2>Verification</h2>
+        <p>Based on your current tweets.html file:</p>
+        
+        <div class="result error">
+            ❌ tweets.html doesn't contain: ["twitter-tweet"]
+        </div>
+        
+        <div class="tweet-example">
+            <h2>Example Embedded Tweet</h2>
+            <p>Here's what a properly embedded Tweet looks like:</p>
+            
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">Just started the ALX Software Engineering program! Excited for this journey. 💻 <a href="https://twitter.com/hashtag/ALX?src=hash&amp;ref_src=twsrc%5Etfw">#ALX</a> <a href="https://twitter.com/hashtag/SoftwareEngineering?src=hash&amp;ref_src=twsrc%5Etfw">#SoftwareEngineering</a></p>
+                &mdash; ALX Student (@alx_student) <a href="https://twitter.com/alx_student/status/1677636512355119104">July 8, 2023</a>
+            </blockquote>
+        </div>
+        
+        <h2>How to Fix</h2>
+        <p>To add an embedded Tweet to your tweets.html file:</p>
+        <ol>
+            <li>Go to Twitter and find a tweet you want to embed</li>
+            <li>Click the ••• (more) button on the tweet</li>
+            <li>Select "Embed Tweet"</li>
+            <li>Copy the HTML code</li>
+            <li>Paste it into your tweets.html file</li>
+        </ol>
+        
+        <p>Alternatively, you can use the example code provided above.</p>
+    </div>
+    
+    <footer>
+        <p>ALX Web Development Project | Twitter Embed Verification</p>
+    </footer>
+</body>
+</html>
